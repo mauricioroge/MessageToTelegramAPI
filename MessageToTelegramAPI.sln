@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - API", "1 - API", "{ECD1F4BE-62DC-40DE-BE56-4B0762706698}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Infra", "2 - Infra", "{6E35F2E8-2FB5-4843-934D-718E67EA0AC9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Domain", "3 - Domain", "{A5C504EB-971C-4181-988A-94B3B1AB0244}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Services", "4 - Services", "{46D75928-A942-4F12-AB54-9BC68A7F1515}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Tests", "5 - Tests", "{94EFA1DE-AF13-4344-8690-648B21E09E5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageToTelegramAPI", "MessageToTelegramAPI\MessageToTelegramAPI.csproj", "{96D2A6E8-984C-47E7-B410-4EA121813DCD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageToTelegramAPI.Infra", "MessageToTelegramAPI.Infra\MessageToTelegramAPI.Infra.csproj", "{C611C9D4-CA04-456F-8F5C-A9EEB063AF1E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageToTelegramAPI.Domain", "MessageToTelegramAPI.Domain\MessageToTelegramAPI.Domain.csproj", "{B9A8B899-ACF8-4315-8276-CA3B9B74EC30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageToTelegramAPI.Services", "MessageToTelegramAPI.Services\MessageToTelegramAPI.Services.csproj", "{45F273CE-60D2-407E-AB32-7084108B4C2E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageToTelegramAPI.Tests", "MessageToTelegramAPI.Tests\MessageToTelegramAPI.Tests.csproj", "{F0B79048-6165-49DC-950D-2656DE628EDA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{96D2A6E8-984C-47E7-B410-4EA121813DCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96D2A6E8-984C-47E7-B410-4EA121813DCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96D2A6E8-984C-47E7-B410-4EA121813DCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96D2A6E8-984C-47E7-B410-4EA121813DCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C611C9D4-CA04-456F-8F5C-A9EEB063AF1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C611C9D4-CA04-456F-8F5C-A9EEB063AF1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C611C9D4-CA04-456F-8F5C-A9EEB063AF1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C611C9D4-CA04-456F-8F5C-A9EEB063AF1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9A8B899-ACF8-4315-8276-CA3B9B74EC30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9A8B899-ACF8-4315-8276-CA3B9B74EC30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9A8B899-ACF8-4315-8276-CA3B9B74EC30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9A8B899-ACF8-4315-8276-CA3B9B74EC30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45F273CE-60D2-407E-AB32-7084108B4C2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45F273CE-60D2-407E-AB32-7084108B4C2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45F273CE-60D2-407E-AB32-7084108B4C2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45F273CE-60D2-407E-AB32-7084108B4C2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0B79048-6165-49DC-950D-2656DE628EDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0B79048-6165-49DC-950D-2656DE628EDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0B79048-6165-49DC-950D-2656DE628EDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0B79048-6165-49DC-950D-2656DE628EDA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{96D2A6E8-984C-47E7-B410-4EA121813DCD} = {ECD1F4BE-62DC-40DE-BE56-4B0762706698}
+		{C611C9D4-CA04-456F-8F5C-A9EEB063AF1E} = {6E35F2E8-2FB5-4843-934D-718E67EA0AC9}
+		{B9A8B899-ACF8-4315-8276-CA3B9B74EC30} = {A5C504EB-971C-4181-988A-94B3B1AB0244}
+		{45F273CE-60D2-407E-AB32-7084108B4C2E} = {46D75928-A942-4F12-AB54-9BC68A7F1515}
+		{F0B79048-6165-49DC-950D-2656DE628EDA} = {94EFA1DE-AF13-4344-8690-648B21E09E5A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4DB1C57C-18B3-4FDD-8B45-93B458A34A74}
+	EndGlobalSection
+EndGlobal

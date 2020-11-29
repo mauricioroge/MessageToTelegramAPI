@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MessageToTelegramAPI.Infra\MessageToTelegramAPI.Infra.csproj" />
+    <ProjectReference Include="..\MessageToTelegramAPI.Services\MessageToTelegramAPI.Services.csproj" />
   </ItemGroup>
 
   <ItemGroup>

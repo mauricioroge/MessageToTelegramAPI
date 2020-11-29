@@ -4,4 +4,13 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Telegram.Bot" Version="15.7.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MessageToTelegramAPI.Domain\MessageToTelegramAPI.Domain.csproj" />
+    <ProjectReference Include="..\MessageToTelegramAPI.Infra\MessageToTelegramAPI.Infra.csproj" />
+  </ItemGroup>
+
 </Project>

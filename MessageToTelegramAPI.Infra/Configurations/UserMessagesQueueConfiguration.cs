@@ -1,6 +1,6 @@
 ﻿namespace MessageToTelegramAPI.Infra.Configurations
 {
-    public class MainApplicationQueueConfiguration
+    public class UserMessagesQueueConfiguration
     {
 
         public string QueueName { get; set; }

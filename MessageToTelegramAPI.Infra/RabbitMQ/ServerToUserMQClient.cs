@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace MessageToTelegramAPI.Infra.RabbitMQ
 {
-    public class RabbitMQMainQueueClient: IRabbitMQClient
+    public class ServerToUserMQClient : IServerToUserMQClient
     {
         private readonly IModel _model;
-        private readonly MainApplicationQueueConfiguration _queueConfiguration;
+        private readonly ServerMessagesQueueConfiguration _queueConfiguration;
 
-        public RabbitMQMainQueueClient(IRabbitMQContext rabbitMQContext, IOptions<MainApplicationQueueConfiguration> options)
+        public ServerToUserMQClient(IRabbitMQContext rabbitMQContext, IOptions<ServerMessagesQueueConfiguration> options)
         {
             _queueConfiguration = options.Value;
             _model = rabbitMQContext.Connection.CreateModel();
@@ -20,7 +20,7 @@ namespace MessageToTelegramAPI.Infra.RabbitMQ
             _model.QueueBind(_queueConfiguration.QueueName, _queueConfiguration.ExchangeName, _queueConfiguration.RoutingKey);
         }
 
-        IModel IRabbitMQClient.Model => _model;
+        IModel IServerToUserMQClient.Model => _model;
 
         
 

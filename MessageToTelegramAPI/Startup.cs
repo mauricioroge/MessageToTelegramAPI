@@ -1,7 +1,9 @@
 using MessageToTelegramAPI.BackgroundServices;
+using MessageToTelegramAPI.Domain.Services;
 using MessageToTelegramAPI.Infra.Configurations;
 using MessageToTelegramAPI.Infra.RabbitMQ;
 using MessageToTelegramAPI.Infra.RabbitMQ.Interfaces;
+using MessageToTelegramAPI.Services.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -23,12 +25,19 @@ namespace MessageToTelegramAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.Configure<RabbitMQConfiguration>(_configuration.GetSection("RabbitMQConfiguration"));
-            services.Configure<MainApplicationQueueConfiguration>(_configuration.GetSection("MainApplicationQueueConfiguration"));
+            services.Configure<UserMessagesQueueConfiguration>(_configuration.GetSection("UserMessagesQueueConfiguration"));
+            services.Configure<ServerMessagesQueueConfiguration>(_configuration.GetSection("ServerMessagesQueueConfiguration"));
+            services.Configure<TelegramBotConfiguration>(_configuration.GetSection("TelegramBotConfiguration"));
 
-            services.AddTransient<IRabbitMQClient, RabbitMQMainQueueClient>();
+            services.AddTransient<IServerToUserMQClient, ServerToUserMQClient>();
+            services.AddTransient<IUserToServerMQClient, UserToServerMQClient>();
             services.AddSingleton<IRabbitMQContext, RabbitMQContext>();
 
-            services.AddHostedService<RabbitMQConsumerBackgroundService>();
+            
+            services.AddTransient<ITelegramService, TelegramService>();
+            
+            
+            services.AddHostedService<MessageConsumerFromServerBackgroundService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
